@@ -11,6 +11,8 @@ posision_final=2020202020202020
 lista=[1,2,3]
 conj_listas=str(lista)
 
+#----------------------------------------------------
+
 def resetLista():
     lista=[1,2,3]
     conj_listas=str(lista)
@@ -41,6 +43,8 @@ def agregar(conj_listas):
     archivo.write("\n Fin de las listas")
     archivo.close()
 
+#-------------------------------------------------------------------    
+    
 print("Este algoritmo da solución al siguiente problema:\nUna computadora comienza imprimiendo los números 1, 2 y 3. Luego continúa imprimiendo sin parar la suma de los últimos 3 números que imprimió: 6, 11, 20, 37, 68, ... \n¿Cuales son los últimos 4 dígitos del número impreso en la posición 2020202020202020? \nPor ejemplo, en la posición 30, está impreso el número 45152016 que termina en 2016.\n\n")
 
 print("Solución ---> Comienzo \n\n")
@@ -59,9 +63,6 @@ while ciclos_no_def or ciclos>demasiados_ciclos: # La segunda condición es una 
     else:
         conj_listas= conj_listas+str(lista) # Actualiza el conjunto de listas
 
-
-
-
 ciclos_remanentes = posision_final % ciclos
 cant_repeticiones= (posision_final-ciclos_remanentes)//ciclos
 
@@ -70,9 +71,9 @@ cant_repeticiones= (posision_final-ciclos_remanentes)//ciclos
 if not ciclos_no_def:
     print("\nSe encontró que el ciclo se repite "+ str(cant_repeticiones)+ " veces cada "+ str(ciclos)+ " iteraciones\n") 
     print("El bloque repetido sigue siendo demasiado grande para presentarlo por pantalla\npor lo que se guardó en el archivo salida_lista.txt en este mismo directorio\n")
-    print("\nContinuando con el ciclo no repetido...")
+    print("\nContinuando con el ciclo no repetido...") 
     
-    # Una vez encotrado el bloque que se repite, se lo guarda, se descartan los próximos bloques repetidos, se resetea la lista a [1,2,3] y se sigue hasta el final de la secuencia. 
+# Una vez encotrado el bloque que se repite, se lo guarda, se descartan los próximos bloques repetidos, se resetea la lista a [1,2,3] y se sigue hasta el final de la secuencia. 
     
     archivar(conj_listas)
     resetLista()
